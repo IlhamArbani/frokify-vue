@@ -1,6 +1,6 @@
 export type State = {
     bookmarked: {}[];
-    recipe: {}[];
-    detailRecipe: string;
+    recipe: [];
+    detailRecipe: {};
     myRecipe: {}[]
 }

@@ -1,13 +1,13 @@
 import {State} from './model'
 
 export default {
-    setLoadingRecipe(state: State,payload: {isLoading: boolean}){
-        state.loading = payload.isLoading;
+    setLoadingRecipe(state: State, payload: { value: boolean }) {
+        state.loading = payload.value;
     },
-    setLoadingDetailRecipe(state: State, payload:{isLodaingDetail: boolean}){
-        state.detailLoading = payload.isLodaingDetail;
+    setLoadingDetailRecipe(state: State, payload: { value: boolean }) {
+        state.detailLoading = payload.value;
     },
-    setModal(state: State, payload:{isModal: boolean}){
-        state.showModalRecipe = payload.isModal
+    setModal(state: State, payload: { value: boolean }) {
+        state.showModalRecipe = payload.value
     }
 }
