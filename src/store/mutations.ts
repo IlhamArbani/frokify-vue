@@ -7,7 +7,7 @@ export default {
     setLoadingDetailRecipe(state: State, payload: { value: boolean }) {
         state.detailLoading = payload.value;
     },
-    setModal(state: State, payload: { value: boolean }) {
-        state.showModalRecipe = payload.value
+    setModal(state: State) {
+        state.showModalRecipe = !state.showModalRecipe
     }
 }

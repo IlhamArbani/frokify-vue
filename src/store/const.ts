@@ -4,7 +4,8 @@ export enum ActionTypes{
     SET_MODAL = 'setModal',
     SET_RECIPE_ITEM = 'setRecipeItem',
     SET_DETAIL_RECIPE = 'setDetailRecipe',
-    SET_BOOKMARK = 'setBookmark'
+    SET_BOOKMARK = 'setBookmark',
+    UNSET_BOOKMARK = 'unsetBookmark'
 }
 
 export enum Api {

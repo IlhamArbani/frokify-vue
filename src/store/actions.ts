@@ -8,6 +8,6 @@ export default {
         context.commit(ActionTypes.SET_LOADING_DETAIL_RECIPE,{isLoadingDetail: true})
     },
     showModal(context: any){
-        context.commit(ActionTypes.SET_MODAL,{isModal: true})
-    }
+        context.commit(ActionTypes.SET_MODAL)
+    },
 }

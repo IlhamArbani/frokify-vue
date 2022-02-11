@@ -14,7 +14,7 @@
         <div class="w-full bg-white flex justify-between py-12 items-center px-12">
             <p>60 Minutes</p>
             <!-- <ServingCounter/> -->
-            <button v-if="isMarked(recipe.recipe_id)" class='h-12 w-12 rounded-full  bg-blue-400'></button> 
+            <button v-if="isMarked" @click="unsetBookmarked(recipe.recipe_id)" class='h-12 w-12 rounded-full  bg-blue-400'></button> 
             <button v-else @click='setBookmarked(recipe)' class='h-12 w-12 rounded-full  bg-orange-400'></button>
         </div>
         <div class="w-full px-6 flex flex-col items-center py-4">
@@ -38,15 +38,15 @@ export default {
     },
     methods:{
         setBookmarked(recipe){
-            console.log('it has clik')
             this.$store.dispatch('recipe/setBookmark',{value:recipe})
+        }, unsetBookmarked(id){
+            this.$store.dispatch('recipe/unsetBookmark',{value: id});
         }
     },
     computed:{
-        isMarked(id){
-            console.log('from detailRecipe')
-            console.log(this.$store.getters['recipe/checkBookmarkedRecipe'](id))
-            return this.$store.getters['recipe/checkBookmarkedRecipe'](id)
+        isMarked(){
+            // return this.$store.state.recipe.bookmarked.find(e => e.recipe_id === this.recipe.recipe_id )
+            return this.$store.getters['recipe/checkBookmarkedRecipe'](this.recipe.recipe_id)
         }
     }
 }

@@ -29,6 +29,9 @@ export default {
             })
     },
     setBookmark(context: any, payload: { value: {} }) {
-        context.commit(ActionTypes.SET_BOOKMARK, { value: payload })
+        context.commit(ActionTypes.SET_BOOKMARK, payload)
+    },
+    unsetBookmark(context: any, payload: { value: string }) {
+        context.commit(ActionTypes.UNSET_BOOKMARK, payload)
     }
 }

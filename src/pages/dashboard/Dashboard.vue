@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import Loading from '../components/Loading.vue'
-import RecipeItem from '../components/RecipeItems.vue'
-import DetailRecipe from '../components/DetailRecipe.vue'
+import Loading from './Loading.vue'
+import RecipeItem from '../../components/RecipeItems.vue'
+import DetailRecipe from './DetailRecipe.vue'
 
 export default {
     components:{

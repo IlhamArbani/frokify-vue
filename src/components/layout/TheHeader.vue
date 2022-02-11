@@ -6,7 +6,7 @@
         </div>
         <search-recipe></search-recipe>
         <div class="flex">
-            <!-- <AddRecipe /> -->
+            <AddRecipe />
             <Bookmark />
         </div>
     </div>
@@ -15,10 +15,12 @@
 <script>
 import SearchRecipe from '../SearchRecipe.vue'
 import Bookmark from '../BookMark.vue'
+import AddRecipe from '../AddRecipe.vue'
 export default {
     components:{
         SearchRecipe,
-        Bookmark
+        Bookmark,
+        AddRecipe
     }
 }
 </script>
